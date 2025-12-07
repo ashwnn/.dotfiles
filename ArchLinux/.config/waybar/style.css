@@ -1,0 +1,61 @@
+
+window#waybar {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #ffffff;
+    font-family: 'monospace';
+    font-size: 26px;
+    border-radius: 10px;
+}
+
+#waybar .module {
+    background-color: transparent;
+    padding: 0 8px;
+    font-weight: bolder;
+}
+
+#waybar .module:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+#network, #memory, #cpu {
+    color: #a9b1d6;
+}
+
+#cpu .critical {
+    color: #fa0202;
+}
+
+#clock, #custom-weather {
+    color: #fff;
+}
+
+#pulseaudio, #pulseaudio#microphone {
+    color: #fff;
+}
+
+tooltip {
+    font-family: 'monospace';
+    background-color: #2e3440;
+    color: #eceff4;
+    border: 1px solid #3b4252;
+    border-radius: 5px;
+    padding: 5px 10px;
+    font-size: 13px;
+}
+
+#tray {
+    margin-left: 10px;
+}
+
+#window {
+   color: #0a99ff;
+}
+
+window#waybar.empty #window {
+    background-color: transparent;
+}
+
+#workspaces button.active {
+    color:#81C4FF;
+    border: 2px solid;
+}

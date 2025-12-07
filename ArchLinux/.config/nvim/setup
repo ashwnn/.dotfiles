@@ -1,0 +1,30 @@
+#!/bin/bash
+
+echo "Setting up Neovim configuration for user: ashwnn"
+echo "Current date and time: 2025-03-13 19:40:32"
+
+# Make sure the Neovim config directory exists
+mkdir -p ~/.config/nvim/after/plugin
+mkdir -p ~/.config/nvim/lua
+
+# Install Packer if not already installed
+if [ ! -d "${HOME}/.local/share/nvim/site/pack/packer/start/packer.nvim" ]; then
+  echo "Installing Packer.nvim..."
+  git clone --depth 1 https://github.com/wbthomason/packer.nvim \
+    ~/.local/share/nvim/site/pack/packer/start/packer.nvim
+fi
+
+# Install dependencies
+echo "Installing dependencies..."
+pip install --user pynvim
+npm install -g neovim typescript eslint_d prettier
+
+# Run packer sync via headless Neovim (non-interactive)
+echo "Running PackerSync..."
+nvim --headless -c 'autocmd User PackerComplete quitall' -c 'PackerSync'
+
+# Install language servers via Mason
+echo "Installing language servers..."
+nvim --headless -c 'MasonInstall tsserver gopls pyright eslint_d lua-language-server' -c 'quitall'
+
+echo "Setup complete! Please start Neovim now."

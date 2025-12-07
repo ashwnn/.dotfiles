@@ -1,0 +1,28 @@
+anchor = top
+width = 2550
+height = 50
+horizontal = true
+font-size = 13
+font = monospace
+prompt-text = "$ "
+
+background-color = #141414
+text-color = #ffffff
+selection-color = #ffffff
+
+outline-width = 2
+outline-color = #2a2a2a
+border-width = 0
+
+min-input-width = 200
+num-results = 8
+result-spacing = 20
+
+alternate-result-background = #2b2b2b
+alternate-result-background-padding = 6,14
+
+margin-top = 10
+padding-top = 12
+padding-bottom = 12
+padding-left = 18
+padding-right = 18
