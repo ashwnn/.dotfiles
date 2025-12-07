@@ -85,6 +85,29 @@
 	"on-click": "btop",
         "max-length": 10
     },
+    "backlight": {
+        "device": "intel_backlight",
+        "format": "{icon} {percent}%",
+        "format-icons": ["🔅", "🔆"],
+        "on-scroll-up": "brightnessctl set 5%+",
+        "on-scroll-down": "brightnessctl set 5%-",
+        "min-length": 6
+    },
+    "battery": {
+        "interval": 5,
+        "states": {
+            "good": 80,
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{icon} {capacity}%",
+        "format-charging": "⚡ {capacity}%",
+        "format-plugged": "🔌 {capacity}%",
+        "format-alt": "{icon} {time}",
+        "format-icons": ["🪫", "🔋", "🔋", "🔋", "🔋"],
+        "tooltip": true,
+        "tooltip-format": "{timeTo}"
+    },
     "tray": {
         "icon-size": 18,
         "spacing": 10

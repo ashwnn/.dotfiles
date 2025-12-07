@@ -8,9 +8,9 @@
     "height": 30,
     "margin": 5,
 
-    "modules-left": ["clock", "custom/weather", "hyprland/workspaces"],
+    "modules-left": ["hyprland/workspaces"],
     "modules-center": ["hyprland/window"],
-    "modules-right": ["network", "memory", "temperature", "cpu", "tray"],
+    "modules-right": ["custom/weather", "network", "cpu", "memory", "temperature", "backlight", "battery", "clock", "tray"],
 
     "include": ["/home/a/.config/waybar/modules.jsonc"]
 }

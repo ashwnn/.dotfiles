@@ -55,7 +55,39 @@ window#waybar.empty #window {
     background-color: transparent;
 }
 
+#battery {
+    color: #2ecc71;
+}
+
+#battery.warning {
+    color: #f39c12;
+}
+
+#battery.critical {
+    color: #e74c3c;
+}
+
+#battery.charging {
+    color: #3498db;
+}
+
+#battery.plugged {
+    color: #9b59b6;
+}
+
+#backlight {
+    color: #f1c40f;
+}
+
+#temperature {
+    color: #e67e22;
+}
+
+#temperature.critical {
+    color: #c0392b;
+}
+
 #workspaces button.active {
-    color:#81C4FF;
+    color: #81C4FF;
     border: 2px solid;
 }
