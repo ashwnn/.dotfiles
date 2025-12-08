@@ -1,7 +1,7 @@
 window#waybar {
     background-color: rgba(0, 0, 0, 0.8);
     color: #ffffff;
-    font-family: 'monospace';
+    font-family: "JetBrains Mono Nerd Font", "Noto Color Emoji", sans-serif;
     font-size: 26px;
     border-radius: 10px;
 }
@@ -16,7 +16,9 @@ window#waybar {
     background-color: rgba(255, 255, 255, 0.1);
 }
 
-#network, #memory, #cpu {
+#network,
+#memory,
+#cpu {
     color: #a9b1d6;
 }
 
@@ -24,16 +26,14 @@ window#waybar {
     color: #fa0202;
 }
 
-#clock, #custom-weather {
+#clock,
+#custom-weather {
     color: #fff;
 }
 
-#pulseaudio, #pulseaudio#microphone {
-    color: #1abc9c;
-}
-
-#backlight {
-    color: #f39c12;
+#pulseaudio,
+#pulseaudio#microphone {
+    color: #fff;
 }
 
 tooltip {
@@ -94,9 +94,5 @@ window#waybar.empty #window {
 
 #workspaces button.active {
     color: #81C4FF;
-    border-bottom: 2px solid #81C4FF;
-}
-
-#workspaces button.occupied {
-    color: #a9b1d6;
+    border: 2px solid;
 }
