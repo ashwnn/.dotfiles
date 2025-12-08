@@ -1,4 +1,3 @@
-
 window#waybar {
     background-color: rgba(0, 0, 0, 0.8);
     color: #ffffff;
@@ -30,7 +29,11 @@ window#waybar {
 }
 
 #pulseaudio, #pulseaudio#microphone {
-    color: #fff;
+    color: #1abc9c;
+}
+
+#backlight {
+    color: #f39c12;
 }
 
 tooltip {
@@ -48,7 +51,7 @@ tooltip {
 }
 
 #window {
-   color: #0a99ff;
+    color: #0a99ff;
 }
 
 window#waybar.empty #window {
@@ -67,16 +70,8 @@ window#waybar.empty #window {
     color: #e74c3c;
 }
 
-#battery.charging {
+#battery.charging, #battery.plugged {
     color: #3498db;
-}
-
-#battery.plugged {
-    color: #9b59b6;
-}
-
-#backlight {
-    color: #f1c40f;
 }
 
 #temperature {
@@ -87,7 +82,21 @@ window#waybar.empty #window {
     color: #c0392b;
 }
 
+#workspaces {
+    margin-right: 10px;
+}
+
+#workspaces button {
+    padding: 0 6px;
+    color: #666;
+    border-bottom: 2px solid transparent;
+}
+
 #workspaces button.active {
     color: #81C4FF;
-    border: 2px solid;
+    border-bottom: 2px solid #81C4FF;
+}
+
+#workspaces button.occupied {
+    color: #a9b1d6;
 }

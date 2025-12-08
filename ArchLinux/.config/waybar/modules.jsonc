@@ -1,5 +1,5 @@
 {
-"clock": {
+    "clock": {
         "format": "{:%H:%M:%S %b-%d-%Y}",
         "interval": 1
     },
@@ -11,10 +11,19 @@
         "return-type": "json"
     },
     "hyprland/workspaces": {
-        "disable-scroll": true,
+        "disable-scroll": false,
         "all-outputs": true,
         "on-click": "activate",
-        "persistent_workspaces": {
+        "format": "{name}",
+        "format-icons": {
+            "1": "1",
+            "2": "2",
+            "3": "3",
+            "4": "4",
+            "5": "5",
+            "6": "6"
+        },
+        "persistent-workspaces": {
             "1": [],
             "2": [],
             "3": [],
@@ -27,7 +36,7 @@
         "format": "{}"
     },
     "network": {
-       "interface": "enp6s0", // (Optional) To force the use of this interface
+        "interface": "enp6s0", // (Optional) To force the use of this interface
         "format-wifi": "\uf063 {bandwidthDownBytes} \uf062 {bandwidthUpBytes} /",
         "format-ethernet": "\uf063 {bandwidthDownBytes} \uf062 {bandwidthUpBytes} /",
         "tooltip-format": "{essid} - {ifname} via {gwaddr}",
@@ -37,31 +46,18 @@
         "interval": 1
     },
     "pulseaudio": {
-        "format": "{icon} {volume}%",
+        "format": "V: {volume}%",
         "tooltip": false,
-        "format-muted": " Muted",
+        "format-muted": "V: MUTE",
         "on-click": "pamixer -t",
         "on-scroll-up": "pamixer -i 5",
         "on-scroll-down": "pamixer -d 5",
-        "scroll-step": 5,
-        "format-icons": {
-            "headphone": "🎧",
-            "hands-free": "🎧",
-            "headset": "🎧",
-            "phone": "📞",
-            "portable": "📞",
-            "car": "🚗",
-            "default": [
-                "🔈",
-                "🔉",
-                "🔊"
-            ]
-        }
+        "scroll-step": 5
     },
     "pulseaudio#microphone": {
-        "format": "{format_source}",
-        "format-source": "🎙️{volume}%",
-        "format-source-muted": " Muted",
+        "format": "M: {volume}%",
+        "format-source": "M: {volume}%",
+        "format-source-muted": "M: MUTE",
         "on-click": "pamixer --default-source -t",
         "on-scroll-up": "pamixer --default-source -i 5",
         "on-scroll-down": "pamixer --default-source -d 5",
@@ -75,20 +71,19 @@
         "interval": 1,
         "hwmon-path": "/sys/devices/pci0000:00/0000:00:18.3/hwmon/hwmon2/temp1_input",
         "format": "/ {temperatureC}°C ",
-	"critical-threshold": 70,
-	"format-critical": "/ {temperatureC}°C "
+        "critical-threshold": 70,
+        "format-critical": "/ {temperatureC}°C "
     },
     "cpu": {
         "interval": 1,
         "format": "/ L: {}%",
-	"format-alt": "/ U: {usage}%",
-	"on-click": "btop",
+        "format-alt": "/ U: {usage}%",
+        "on-click": "btop",
         "max-length": 10
     },
     "backlight": {
         "device": "intel_backlight",
-        "format": "{icon} {percent}%",
-        "format-icons": ["🔅", "🔆"],
+        "format": "L: {percent}%",
         "on-scroll-up": "brightnessctl set 5%+",
         "on-scroll-down": "brightnessctl set 5%-",
         "min-length": 6
@@ -100,11 +95,10 @@
             "warning": 30,
             "critical": 15
         },
-        "format": "{icon} {capacity}%",
-        "format-charging": "⚡ {capacity}%",
-        "format-plugged": "🔌 {capacity}%",
-        "format-alt": "{icon} {time}",
-        "format-icons": ["🪫", "🔋", "🔋", "🔋", "🔋"],
+        "format": "B: {capacity}%",
+        "format-charging": "B+: {capacity}%",
+        "format-plugged": "B+: {capacity}%",
+        "format-alt": "B: {time}",
         "tooltip": true,
         "tooltip-format": "{timeTo}"
     },

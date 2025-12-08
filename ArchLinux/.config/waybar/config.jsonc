@@ -7,10 +7,10 @@
     "gtk-layer-shell": true,
     "height": 30,
     "margin": 5,
-
     "modules-left": ["hyprland/workspaces"],
     "modules-center": ["hyprland/window"],
-    "modules-right": ["custom/weather", "network", "cpu", "memory", "temperature", "backlight", "battery", "clock", "tray"],
-
-    "include": ["/home/a/.config/waybar/modules.jsonc"]
+    "modules-right": ["custom/weather", "network", "cpu", "memory", "temperature", "backlight", "pulseaudio", "pulseaudio#microphone", "battery", "clock", "tray"],
+    "include": [
+        "/home/a/.config/waybar/modules.jsonc"
+    ]
 }
