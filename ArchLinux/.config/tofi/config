@@ -2,27 +2,54 @@ anchor = top
 width = 2550
 height = 50
 horizontal = true
-font-size = 13
+
 font = monospace
+font-size = 13
 prompt-text = "$ "
 
 background-color = #141414
-text-color = #ffffff
-selection-color = #ffffff
+corner-radius = 10
+
+margin-top = 10
+padding-top = 10
+padding-bottom = 10
+padding-left = 18
+padding-right = 18
+
+text-color = #f0f0f0
+
+prompt-color = #a0a0a0
+prompt-background = #1b1b1b
+prompt-background-padding = 6,12
+prompt-background-corner-radius = 8
+
+input-color = #ffffff
+input-background = #1b1b1b
+input-background-padding = 6,14
+input-background-corner-radius = 8
+
+placeholder-text = "Search..."
+placeholder-color = #777777
+
+text-cursor-style = bar
+text-cursor-thickness = 2
 
 outline-width = 2
-outline-color = #2a2a2a
+outline-color = #252525
 border-width = 0
 
 min-input-width = 200
 num-results = 8
-result-spacing = 20
+result-spacing = 10
 
-alternate-result-background = #2b2b2b
+default-result-background = #00000000
+
+alternate-result-background = #222222
 alternate-result-background-padding = 6,14
+alternate-result-background-corner-radius = 6
 
-margin-top = 10
-padding-top = 12
-padding-bottom = 12
-padding-left = 18
-padding-right = 18
+selection-color = #ffffff
+selection-match-color = #cbd5f5
+selection-background = #3b82f6
+selection-background-padding = 6,14
+selection-background-corner-radius = 6
