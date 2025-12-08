@@ -1,0 +1,41 @@
+#!/bin/bash
+
+# Function to display usage
+usage() {
+    echo "Usage: $0 [-f filename]"
+    echo "  -f filename    Specify a file to decrypt."
+    echo "  If no file is specified, data will be read from stdin."
+}
+
+# Parse command line options
+while getopts ":f:" opt; do
+  case ${opt} in
+    f )
+      file_to_decrypt=$OPTARG
+      ;;
+    \? )
+      echo "Invalid option: $OPTARG" 1>&2
+      usage
+      exit 1
+      ;;
+    : )
+      echo "Invalid option: $OPTARG requires an argument" 1>&2
+      usage
+      exit 1
+      ;;
+  esac
+done
+shift $((OPTIND -1))
+
+# Decrypt the file if specified, otherwise decrypt stdin
+if [ -n "$file_to_decrypt" ]; then
+    if [ ! -f "$file_to_decrypt" ]; then
+        echo "Error: File $file_to_decrypt does not exist."
+        exit 1
+    fi
+    gpg --output "${file_to_decrypt%.gpg}" --decrypt "$file_to_decrypt"
+    echo "File decrypted successfully: ${file_to_decrypt%.gpg}"
+else
+    gpg --decrypt
+    echo "Content decrypted successfully."
+fi
