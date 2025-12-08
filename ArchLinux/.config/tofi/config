@@ -40,7 +40,7 @@ border-width = 0
 
 min-input-width = 200
 num-results = 8
-result-spacing = 10
+result-spacing = 30
 
 default-result-background = #00000000
 
