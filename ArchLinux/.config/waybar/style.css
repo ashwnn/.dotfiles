@@ -70,7 +70,8 @@ window#waybar.empty #window {
     color: #e74c3c;
 }
 
-#battery.charging, #battery.plugged {
+#battery.charging,
+#battery.plugged {
     color: #3498db;
 }
 
