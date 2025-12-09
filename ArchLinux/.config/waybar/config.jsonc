@@ -5,7 +5,7 @@
     "exclusive": true,
     "passthrough": false,
     "gtk-layer-shell": true,
-    "height": 30,
+    "height": 60,
     "margin": 5,
     "modules-left": [
         "clock",
@@ -26,6 +26,6 @@
         "tray"
     ],
     "include": [
-        "/home/a/.config/waybar/modules.jsonc"
+        "/home/ashwin/.config/waybar/modules.jsonc"
     ]
 }

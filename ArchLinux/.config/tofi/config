@@ -1,16 +1,16 @@
 anchor = top
 width = 2550
-height = 50
+height = 60
 horizontal = true
 
-font = monospace
-font-size = 13
+font = "JetBrains Mono Nerd Font"
+font-size = 16
 prompt-text = "$ "
 
 background-color = #141414
 corner-radius = 10
 
-margin-top = 10
+margin-top = 5
 padding-top = 10
 padding-bottom = 10
 padding-left = 18

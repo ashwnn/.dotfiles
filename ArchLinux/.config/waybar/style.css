@@ -2,13 +2,13 @@ window#waybar {
     background-color: rgba(0, 0, 0, 0.8);
     color: #ffffff;
     font-family: "JetBrains Mono Nerd Font", "Noto Color Emoji", sans-serif;
-    font-size: 26px;
+    font-size: 18px;
     border-radius: 10px;
 }
 
 #waybar .module {
     background-color: transparent;
-    padding: 0 8px;
+    padding: 0 10px;
     font-weight: bolder;
 }
 
@@ -37,13 +37,13 @@ window#waybar {
 }
 
 tooltip {
-    font-family: 'monospace';
+    font-family: "JetBrains Mono Nerd Font", "Noto Color Emoji", sans-serif;
     background-color: #2e3440;
     color: #eceff4;
     border: 1px solid #3b4252;
     border-radius: 5px;
     padding: 5px 10px;
-    font-size: 13px;
+    font-size: 16px;
 }
 
 #tray {
