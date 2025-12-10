@@ -1,6 +1,6 @@
 {
 "clock": {
-        "format": "{:%H:%M:%S %b-%d-%Y}",
+        "format": "{:%H:%M:%S %b-%d}",
         "interval": 1
     },
     "custom/weather": {
@@ -27,7 +27,7 @@
         "format": "{}"
     },
     "network": {
-       "interface": "enp6s0", // (Optional) To force the use of this interface
+       "interface": "wlan0", // (Optional) To force the use of this interface
         "format-wifi": "\uf063 {bandwidthDownBytes} \uf062 {bandwidthUpBytes} /",
         "format-ethernet": "\uf063 {bandwidthDownBytes} \uf062 {bandwidthUpBytes} /",
         "tooltip-format": "{essid} - {ifname} via {gwaddr}",
